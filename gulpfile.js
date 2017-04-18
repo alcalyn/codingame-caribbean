@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+var gulp = require('gulp');
 const {phpMinify} = require('@cedx/gulp-php-minify');
 var concat = require('gulp-concat');
 var deleteLines = require('gulp-delete-lines');
@@ -9,7 +9,7 @@ gulp.task('default', function() {
         .src([
             './[A-Z]*.php',
             './index.php'
-        ], {read: false})
+        ])
         .pipe(phpMinify())
         .pipe(concat('dump.php'))
         .pipe(deleteLines({

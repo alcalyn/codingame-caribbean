@@ -88,7 +88,8 @@ If a ship attempts to leave the map, it is stopped and its speed is set to 0.
 
 Collisions between ships are computed during the movement phase. If a moving
 ship's front were to collide with another ship, its movement is cancelled and
-its speed is set to 0. Every time a movement is cancelled, collisions are checked again using the new positions.
+its speed is set to 0. Every time a movement is cancelled, collisions are
+checked again using the new positions.
 
 At the end of the ships' rotation phase, collision are checked again. Ships
 whose rotation would bring about a collision will have their rotation cancelled
